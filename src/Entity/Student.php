@@ -33,6 +33,11 @@ class Student
      */
     private $birthday;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Promotion", inversedBy="students")
+     */
+    private $promotion;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -70,6 +75,18 @@ class Student
     public function setBirthday(?\DateTimeInterface $birthday): self
     {
         $this->birthday = $birthday;
+
+        return $this;
+    }
+
+    public function getPromotion(): ?Promotion
+    {
+        return $this->promotion;
+    }
+
+    public function setPromotion(?Promotion $promotion): self
+    {
+        $this->promotion = $promotion;
 
         return $this;
     }
