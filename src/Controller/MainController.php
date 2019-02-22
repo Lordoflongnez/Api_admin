@@ -27,7 +27,7 @@ class MainController extends Controller
    public function index(Request $request)
    {
 
-       $controller_name = "loic!";
+       $controller_name = "Matthias!";
        return $this->render('main/index.html.twig', [
            'controller_name' => $controller_name,
        ]);
