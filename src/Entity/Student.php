@@ -90,9 +90,4 @@ class Student
 
         return $this;
     }
-    
-    public function getFullName()
-    {
-        return $this->getFirstname().' '.$this->getLastname();
-    }
 }
